@@ -1,15 +1,15 @@
 const photos = Array.from({length:10}, (_,i)=>`${i+1}.jpg`);
 const messages = [
-  "😍 Meri Moti, tum meri favourite ho.",
-  "🥹 Tumhari smile dekh ke mood automatically better ho jata hai.",
-  "😏 Thodi cute ho… thodi pagal bhi. Perfect combination. ❤️",
-  "🫶 Tumhare saath har normal moment bhi special lagta hai.",
-  "🙈 Haan haan, meri Moti hi ho tum… ab zyada bhaav mat khaana.",
-  "💗 Tumhari care mujhe bahut precious lagti hai.",
-  "😂 Tumhari nautanki bhi meri favourite hai.",
-  "👑 Mere liye tum bas ek hi ho — my queen, my Moti.",
-  "🥰 Jitni baar tumhe dekhu, utni baar aur pyaar ho jata hai.",
-  "❤️ Last mein bas itna: I love you, meri Moti. Always."
+  "🥹❤️ Ye smile… bas isi pe toh dil haar gaya. 🫶",
+  "Accha ji, itni cute photo daal ke mera chain chura liya… ab khush ho Moti? 🤭😂❤️",
+  "🙈❤️ Chehra chhupa lo, par meri nazar se kaise bachogi? 🥹",
+  "Haan haan, photo achhi hai… ab zyada attitude mat dikhana Moti 😏🤭❤️",
+  "😎❤️ Ye attitude aur ye shades… meri jaan le logi kya? 🥹",
+  "🥹✨ Mirror bhi sochta hoga, roz itni khoobsurat kaise? ❤️",
+  "🌸❤️ Phool bhi sharma gaya hoga tumhare saamne. 🫶",
+  "💚🥹 Is look mein toh nazar hatana mushkil hai, Madamjii. ❤️",
+  "Baat chahe jitni kam ho, feelings kabhi kam nahi hongi… you’ll always be special to me 🥺❤️",
+  "🥹🫂 Bas aise hi sukoon se raho… tumhe dekhna hi mere liye enough hai. ❤️"
 ];
 
 const cover = document.getElementById("cover");
@@ -28,7 +28,7 @@ function render(){
   photo.classList.add("fade");
   setTimeout(()=>{
     photo.src = photos[index];
-    message.innerHTML = `${messages[index]}<span>💞 meri jaan</span>`;
+    message.innerHTML = `${messages[index]}<span>— Tumhara ❤️</span>`;
     count.textContent = index + 1;
     photo.classList.remove("fade");
   },180);
