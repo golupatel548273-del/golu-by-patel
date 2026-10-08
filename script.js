@@ -19,6 +19,8 @@ const nextBtn = document.getElementById("nextBtn");
 const photo = document.getElementById("photo");
 const message = document.getElementById("message");
 const count = document.getElementById("count");
+const bgMusic = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
 
 let index = 0;
 
@@ -44,6 +46,9 @@ function hearts(){
 }
 
 startBtn.addEventListener("click",()=>{
+  bgMusic.volume = 0.35;
+  bgMusic.play().catch(()=>{});
+  musicBtn.textContent = "🔊 Music";
   cover.style.opacity = "0";
   cover.style.transition = "opacity .6s ease";
   setTimeout(()=>{
@@ -60,3 +65,14 @@ nextBtn.addEventListener("click",()=>{
 });
 
 render();
+
+
+musicBtn.addEventListener("click", ()=>{
+  if (bgMusic.paused) {
+    bgMusic.play().catch(()=>{});
+    musicBtn.textContent = "🔊 Music";
+  } else {
+    bgMusic.pause();
+    musicBtn.textContent = "🔇 Music";
+  }
+});
